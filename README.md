@@ -1,9 +1,14 @@
-# api documentation for  [grunt-mocha-istanbul (v5.0.2)](https://github.com/pocesar/grunt-mocha-istanbul#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-mocha-istanbul.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-mocha-istanbul) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-mocha-istanbul.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-mocha-istanbul)
+# npmdoc-grunt-mocha-istanbul
+
+#### api documentation for  [grunt-mocha-istanbul (v5.0.2)](https://github.com/pocesar/grunt-mocha-istanbul#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-mocha-istanbul.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-mocha-istanbul) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-mocha-istanbul.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-mocha-istanbul)
+
 #### Almost config-free Istanbul code coverage reporter for Mocha usage in Grunt
 
-[![NPM](https://nodei.co/npm/grunt-mocha-istanbul.png?downloads=true)](https://www.npmjs.com/package/grunt-mocha-istanbul)
+[![NPM](https://nodei.co/npm/grunt-mocha-istanbul.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/grunt-mocha-istanbul)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-grunt-mocha-istanbul/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-grunt-mocha-istanbul_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-grunt-mocha-istanbul/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-grunt-mocha-istanbul/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-grunt-mocha-istanbul/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-grunt-mocha-istanbul/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-grunt-mocha-istanbul/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-grunt-mocha-istanbul/build/screenCapture.npmPackageListing.svg)
 
@@ -49,8 +54,7 @@
     "main": "tasks/index.js",
     "maintainers": [
         {
-            "name": "pocesar",
-            "email": "gahgneh@gmail.com"
+            "name": "pocesar"
         }
     ],
     "name": "grunt-mocha-istanbul",
@@ -58,7 +62,6 @@
     "peerDependencies": {
         "grunt": ">=0.4.0"
     },
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/pocesar/grunt-mocha-istanbul.git"
@@ -69,16 +72,6 @@
     "version": "5.0.2"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module grunt-mocha-istanbul](#apidoc.module.grunt-mocha-istanbul)
-
-
-
-# <a name="apidoc.module.grunt-mocha-istanbul"></a>[module grunt-mocha-istanbul](#apidoc.module.grunt-mocha-istanbul)
 
 
 
