@@ -61,12 +61,167 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.grunt-mocha-istanbul">module grunt-mocha-istanbul</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-mocha-istanbul.grunt-mocha-istanbul">
+            function <span class="apidocSignatureSpan"></span>grunt-mocha-istanbul
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.grunt-mocha-istanbul" id="apidoc.module.grunt-mocha-istanbul">module grunt-mocha-istanbul</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-mocha-istanbul.grunt-mocha-istanbul" id="apidoc.element.grunt-mocha-istanbul.grunt-mocha-istanbul">
+        function <span class="apidocSignatureSpan"></span>grunt-mocha-istanbul
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">grunt-mocha-istanbul = function (grunt) {
+    &#x27;use strict&#x27;;
+
+    var path = require(&#x27;path&#x27;);
+
+    function getMochaPath() {
+        try {
+            return require.resolve(&#x27;mocha/bin/_mocha&#x27;);
+        } catch (ignored) {
+            grunt.fail.fatal(&#x27;Mocha peer dependency missing.  Please &#x22;npm install mocha&#x22;&#x27;);
+        }
+    }
+
+    function getIstanbulPath() {
+        try {
+            return require.resolve(&#x27;istanbul/lib/cli&#x27;);
+        } catch (ignored) {
+            grunt.fail.fatal(&#x27;Istanbul peer dependency missing.  Please &#x22;npm install istanbul&#x22;&#x27;);
+        }
+    }
+
+    function arrayOfStrings(options, name, exec) {
+        if (Array.isArray(options)) {
+            if (options.length) {
+                exec(options);
+            } else {
+                grunt.verbose.ok(&#x27;Skipping empty &#x27; + name + &#x27; array&#x27;)
+            }
+        } else {
+            grunt.fail.fatal(name + &#x27; must be an array of strings&#x27;);
+        }
+    }
+
+    function defaultOptions() {
+        return {
+            require: [],
+            ui: false,
+            globals: [],
+            reporter: false,
+            timeout: false,
+            coverage: false,
+            slow: false,
+            includes: false,
+            grep: false,
+            dryRun: false,
+            quiet: false,
+            recursive: false,
+            mask: false,
+            root: false,
+            print: false,
+            noColors: false,
+            harmony: false,
+            coverageFolder: &#x27;coverage&#x27;,
+            cwd: process.cwd(),
+            reportFormats: [&#x27;lcov&#x27;],
+            check: {
+                statements: false,
+                lines: false,
+                functions: false,
+                branches: false
+            },
+            excludes: false,
+            mochaOptions: false,
+            istanbulOptions: false,
+            nodeOptions: false,
+            nodeExec: process.execPath
+        };
+    }
+
+    function executeCheck(callback, coverageFolder, options) {
+        var args = [], check = options.check;
+
+        if (
+            check.statements !== false ||
+            check.lines !== false ||
+            check.functions !== false ||
+            check.branches !== false
+            ) {
+            args.push(options.scriptPath);
+            args.push(&#x27;check-coverage&#x27;);
+            if (check.lines) {
+                args.push(&#x27;--lines&#x27;);
+                args.push(check.lines);
+            }
+            if (check.statements) {
+                args.push(&#x27;--statements&#x27;);
+                args.push(check.statements);
+            }
+            if (check.functions) {
+                args.push(&#x27;--functions&#x27;);
+                args.push(check.functions);
+            }
+            if (check.branches) {
+                args.push(&#x27;--branches&#x27;);
+                args.push(check.branches);
+            }
+
+            args.push(coverageFolder + &#x27;/coverage*.json&#x27;);
+
+            grunt.verbose.ok(&#x27;Will execute: &#x27;, options.nodeExec + &#x27; &#x27; + args.join(&#x27; &#x27;));
+
+            if (!options.dryRun) {
+                grunt.util.spawn({
+                    cmd: options.nodeExec,
+                    args: args,
+                    opts: {
+                        env: process.env,
+                        cwd: options.cwd,
+                        stdio: options.quiet ? &#x27;ignore&#x27; : &#x27;inherit&#x27;
+                    }
+                }, function (err) {
+                    if (err) {
+                        callback &#x26;&#x26; callback(err);
+                        return;
+                    }
+                    callback &#x26;&#x26; callback(null, &#x27;Done. Minimum coverage threshold succeeded.&#x27;);
+                });
+
+                return;
+            } else {
+                callback &#x26;&#x26; callback(null, &#x27;Would also execute post cover: &#x27; + options.nodeExec + &#x27; &#x27; + args.join(&#x27; &#x27;));
+                return;
+            }
+        }
+
+        callback &#x26;&#x26; callback();
+    }
+
+    grunt.registerMultiTask(&#x27;istanbul_check_coverage&#x27;, &#x27;Solo task for checking coverage over different or many files.&#x27;, function
+ () {
+        var done = this.async();
+        var options = this.options(defaultOptions());
+
+        // only execute this function if no ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
