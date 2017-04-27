@@ -1,6 +1,6 @@
 # npmdoc-grunt-mocha-istanbul
 
-#### api documentation for  [grunt-mocha-istanbul (v5.0.2)](https://github.com/pocesar/grunt-mocha-istanbul#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-mocha-istanbul.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-mocha-istanbul) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-mocha-istanbul.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-mocha-istanbul)
+#### basic api documentation for  [grunt-mocha-istanbul (v5.0.2)](https://github.com/pocesar/grunt-mocha-istanbul#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-mocha-istanbul.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-mocha-istanbul) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-mocha-istanbul.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-mocha-istanbul)
 
 #### Almost config-free Istanbul code coverage reporter for Mocha usage in Grunt
 
@@ -69,7 +69,8 @@
     "scripts": {
         "test": "grunt"
     },
-    "version": "5.0.2"
+    "version": "5.0.2",
+    "bin": {}
 }
 ```
 
